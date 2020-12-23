@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Boostrap    -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <!-- Font Awesome - Search Icons -->
+    <script src="https://kit.fontawesome.com/3e53f1d5d5.js" crossorigin="anonymous"></script>
+    <!-- CSS Style Sheet  -->
+    <link rel="stylesheet" href="./develop/style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <!-- Weather Dashboard Title -->
+    <nav class="navbar navbar-light bg-info">
+        <span class="navbar-brand mb-0 h1 w-100 text-center text-white">Weather Dashboard</span>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4  col-sm-4 col-xs-4 bg-white mb-3">
+                <p class="search-header my-1 text-secondary">Search for a city, state</p>
+                <!-- city name input box  -->
+                <input id="getCityName" type="text" class="form-control mb-3" placeholder="Enter city name"
+                    aria-label="Enter city code">
+
+                <!-- search button -->
+                <div class="input-group-append ">
+                    <button class="btn btn-info mb-3" type="button" id="search-button">
+                        Search <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <!-- clear history button -->
+                <button class="btn btn-secondary mb-3" type="button" id="clearHistorybutton">Clear history</button>
+
+                <form id="history"></form>
+            </div>
+            <!-- Center column  right side -->
+            <div class="col-md-8 col-xs-8 col-sm-8">
+                <div class="row mr-0">
+                    <!-- bordered box  -->
+                    <div class="col-12 border border-info m-3 rounded">
+
+                        <!--  current date -->
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="currentDate"></p>
+                            </div>
+                        </div>
+                        <!-- searched city name and current weather icon -->
+                        <div class="row">
+                            <div class="col-12">
+                                <span id="cityName" class="cityName align-middle text-muted"></span>
+                                <img id="current-weather-icon" src="//:0" alt="">
+                            </div>
+                        </div>
+                        <!--  current searched city temperature -->
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="temperature"></p>
+                            </div>
+                        </div>
+                        <!--  current searched city humidity -->
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="humidity"></p>
+                            </div>
+                        </div>
+                        <!--  current searched city windSpeed -->
+
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="windSpeed"></p>
+                            </div>
+                        </div>
+                        <!--  current searched city UV -->
+
+                        <div class="row">
+                            <div class="col-12 d-flex">
+                                <p id="UV"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5-Day Forecast -->
+                <div class="row">
+                    <div class="col-12">
+                        <h3>5-Day Forecast</h3>
+                    </div>
+                </div>
+                <!-- upcoming 5-Day Forecast -->
+                <div class="row">
+                    <div class="col fiveDays bg-info text-white ml-3 mb-3 rounded"></div>
+                    <div class="col fiveDays bg-info text-white ml-3 mb-3 rounded"></div>
+                    <div class="col fiveDays bg-info text-white ml-3 mb-3 rounded"></div>
+                    <div class="col fiveDays bg-info text-white ml-3 mb-3 rounded"></div>
+                    <div class="col fiveDays bg-info text-white ml-3 mb-3 rounded"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer font-small fixed-bottom bg-dark footer-copyright">
+        <!-- Copyright -->
+        <div class="col-md-12 col-sm-12 col-xs-12 text-center py-3 text-light">
+            © 2020 Copyright:HKESKIN
+        </div>
+        <!-- End Copyright -->
+    </footer>
+    <!-- End Footer -->
+
+
+    <!--Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- date time moment.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <!--JS -->
+    <script src="./develop/script.js"></script>
+</body>
+
+</html>
